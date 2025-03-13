@@ -19,65 +19,101 @@ Windows = 1
 SystemDynamic = 1
 power.lowPowerEnable(LowPowerEnable.Prevent)
 basic.forever(function () {
-    while (Windows == 1) {
-        basic.showLeds(`
-            . . # . .
-            . # # # .
-            # # # # #
-            . # # # .
-            . # # # .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . . . #
-            . # . # .
-            . # # # .
-            `)
-    }
-    while (Windows == 2) {
-        basic.showLeds(`
-            . . . . #
-            . . # # .
-            . # # # .
-            . # # . .
-            # . . . .
-            `)
-        basic.showLeds(`
-            . . . # .
-            . . # # .
-            . # # # .
-            . # # . .
-            . # . . .
-            `)
-    }
-    while (Windows == 3) {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . # . .
-            . # . # .
-            . # # # .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . . # . .
-            . # . # .
-            . # # # .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . . # . .
-            . . # . .
-            . # . # .
-            . # # # .
-            `)
-    }
-    while (Windows == 4) {
+    if (SystemDynamic == 0) {
+        while (Windows == 1) {
+            basic.showLeds(`
+                . . # . .
+                . # # # .
+                # # # # #
+                . # # # .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . . # . .
+                . # . # .
+                # . . . #
+                . # . # .
+                . # # # .
+                `)
+        }
+        // Compass
+        while (Windows == 2) {
+            basic.showLeds(`
+                . . . . #
+                . . # # .
+                . # # # .
+                . # # . .
+                # . . . .
+                `)
+            basic.showLeds(`
+                . . . # .
+                . . # # .
+                . # # # .
+                . # # . .
+                . # . . .
+                `)
+        }
+        // Thermometer
+        while (Windows == 3) {
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . # . .
+                . # . # .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . . . . .
+                . . # . .
+                . . # . .
+                . # . # .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . . # . .
+                . . # . .
+                . . # . .
+                . # . # .
+                . # # # .
+                `)
+        }
+        // Brightness
+        while (Windows == 4) {
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # . # .
+                . # # # .
+                . . . . .
+                `)
+            basic.showLeds(`
+                # . # . #
+                . # # # .
+                # # . # #
+                . # # # .
+                # . # . #
+                `)
+        }
+        // Noise
+        while (Windows == 5) {
+            basic.showLeds(`
+                . . # . .
+                . # # . .
+                # . . # .
+                . # # . .
+                . . # . .
+                `)
+            basic.showLeds(`
+                . . # . #
+                . # # . .
+                # . . # .
+                . # # . .
+                . . # . #
+                `)
+        }
+    } else if (SystemDynamic == 0) {
     	
-    }
-    while (Windows == 5) {
+    } else {
     	
     }
 })
