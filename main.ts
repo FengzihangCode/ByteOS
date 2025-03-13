@@ -11,15 +11,15 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-	
+    SystemDynamic += 1
 })
 let SystemDynamic = 0
 let Windows = 0
 Windows = 1
-SystemDynamic = 1
+SystemDynamic = 0
 power.lowPowerEnable(LowPowerEnable.Prevent)
 basic.forever(function () {
-    if (SystemDynamic == 0) {
+    if (SystemDynamic < 6) {
         while (Windows == 1) {
             basic.showLeds(`
                 . . # . .
@@ -111,9 +111,18 @@ basic.forever(function () {
                 . . # . #
                 `)
         }
-    } else if (SystemDynamic == 0) {
+    } else if (Windows == 2 && SystemDynamic == 1) {
     	
+    } else if (Windows == 3 && SystemDynamic == 1) {
+    	
+    } else if (Windows == 4 && SystemDynamic == 1) {
+    	
+    } else if (Windows == 6) {
+        Windows = 1
     } else {
     	
     }
+})
+basic.forever(function () {
+	
 })
