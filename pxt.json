@@ -1,0 +1,28 @@
+{
+    "name": "ByteOS",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "power": "github:microbit-foundation/pxt-microbit-v2-power#v0.2.7",
+        "microbit-pxt-clicks": "github:bsiever/microbit-pxt-clicks#v0.2.2"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.57",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
