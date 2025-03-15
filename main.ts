@@ -31,6 +31,9 @@ basic.forever(function () {
         while (Windows == 4) {
             basic.showString("" + (input.lightLevel()))
         }
+        while (Windows == 5) {
+            basic.showString("" + (input.soundLevel()))
+        }
     }
 })
 basic.forever(function () {
@@ -52,7 +55,7 @@ basic.forever(function () {
                 `)
         }
         // Compass
-        while (Windows == 2) {
+        while (Windows == 2 && AppStatus == 0) {
             basic.showLeds(`
                 . . . . #
                 . . # # .
@@ -69,7 +72,7 @@ basic.forever(function () {
                 `)
         }
         // Thermometer
-        while (Windows == 3) {
+        while (Windows == 3 && AppStatus == 0) {
             basic.showLeds(`
                 . . . . .
                 . . . . .
@@ -93,7 +96,7 @@ basic.forever(function () {
                 `)
         }
         // Brightness
-        while (Windows == 4) {
+        while (Windows == 4 && AppStatus == 0) {
             basic.showLeds(`
                 . . . . .
                 . # # # .
@@ -110,7 +113,7 @@ basic.forever(function () {
                 `)
         }
         // Noise
-        while (Windows == 5) {
+        while (Windows == 5 && AppStatus == 0) {
             basic.showLeds(`
                 . . # . .
                 . # # . .
@@ -127,7 +130,7 @@ basic.forever(function () {
                 `)
         }
         // Noise
-        while (Windows == 6) {
+        while (Windows == 6 && AppStatus == 0) {
             Windows = 1
         }
     }
