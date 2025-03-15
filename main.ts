@@ -7,12 +7,13 @@ input.onButtonPressed(Button.AB, function () {
         Windows = 1
     }
     if (AppStatus == 0) {
-        power.lowPowerEnable(LowPowerEnable.Allow)
         power.lowPowerRequest(LowPowerMode.Continue)
     }
 })
 input.onButtonPressed(Button.B, function () {
-    AppStatus = 1
+    if (Windows != 1) {
+        AppStatus = 1
+    }
 })
 let AppStatus = 0
 let Windows = 0
