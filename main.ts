@@ -24,16 +24,16 @@ power.lowPowerEnable(LowPowerEnable.Prevent)
 basic.forever(function () {
     if (Windows < 6 && AppStatus == 1) {
         while (Windows == 2) {
-            basic.showString("" + (input.compassHeading()))
+            basic.showString("Heading: " + input.compassHeading())
         }
         while (Windows == 3) {
-            basic.showString("" + (input.temperature()))
+            basic.showString("Temperature: " + input.temperature())
         }
         while (Windows == 4) {
-            basic.showString("" + (input.lightLevel()))
+            basic.showString("Light: " + input.lightLevel())
         }
         while (Windows == 5) {
-            basic.showString("" + (input.soundLevel()))
+            basic.showString("Sound:" + input.soundLevel())
         }
     }
 })
